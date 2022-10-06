@@ -7,7 +7,8 @@ export interface ScrollToTopProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * This component returns a div that when the shouldScroll changes to be true, will autoscroll to the top of the viewport.
+ * ScrollToTop will automatically scroll its children elements to the top of the
+ * viewport in response to changes to its `shouldScroll` prop.
  */
 export const ScrollToTop: FC<ScrollToTopProps> = ({
     children,

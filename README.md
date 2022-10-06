@@ -17,7 +17,8 @@ in UIs.
 
 ## Usage
 1. (TODO) run `npm install schwifty` or `yarn add schwifty`.
-2. (TODO) implement storybook
+2. View documentation by running `yarn storybook` from the project root.
+The Storybook documentation should open in a new browser window.
 
 
 ### Development
