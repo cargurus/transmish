@@ -37,7 +37,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ScrollToTop = void 0;
 const react_1 = __importStar(require("react"));
 /**
- * This component returns a div that when the shouldScroll changes to be true, will autoscroll to the top of the viewport.
+ * ScrollToTop will automatically scroll its children elements to the top of the
+ * viewport in response to changes to its `shouldScroll` prop.
  */
 const ScrollToTop = (_a) => {
     var { children, shouldScroll, scrollOffset = 0, behavior = "smooth" } = _a, rest = __rest(_a, ["children", "shouldScroll", "scrollOffset", "behavior"]);

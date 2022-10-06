@@ -1,8 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import {
-  ScrollToTop,
-  ScrollToTopProps,
-} from "../../build/ScrollToTop/ScrollToTop";
+import { ScrollToTopProps, ScrollToTop } from "../ScrollToTop";
 
 type BaseProps = Omit<ScrollToTopProps, "shouldScroll">;
 

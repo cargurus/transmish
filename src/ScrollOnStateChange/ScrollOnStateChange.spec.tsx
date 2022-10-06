@@ -2,9 +2,6 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { ScrollOnStateChange } from ".";
 
-window.scroll = jest.fn();
-window.scrollTo = jest.fn();
-
 describe("ScrollToTop Tests", () => {
   beforeEach(() => {
     jest.clearAllMocks();
