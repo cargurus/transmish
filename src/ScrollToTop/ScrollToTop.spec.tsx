@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import userEvent from "@testing-library/user-event/dist";
 import { render, screen } from "@testing-library/react";
-import { ScrollToTop } from "./ScrollToTop";
+import { ScrollToTop } from ".";
 
 window.scroll = jest.fn();
 window.scrollTo = jest.fn();

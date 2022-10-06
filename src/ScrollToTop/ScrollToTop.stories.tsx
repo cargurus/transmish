@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ScrollToTop } from "./ScrollToTop";
+import { ScrollToTop } from "./index";
 
 export default {
   title: "ScrollToTop",
@@ -11,7 +11,7 @@ const Spacer = () => {
   return <div style={{ background: "green", height: "200rem", width: 100 }} />;
 };
 
-export const Primary: ComponentStory<typeof ScrollToTop> = () => {
+export const Example: ComponentStory<typeof ScrollToTop> = () => {
   const [shouldScrollDown, setShouldScrollDown] = useState(false);
   const [shouldScrollToButton, setShouldScrollToButton] = useState(false);
   const scrollDown = () => {
