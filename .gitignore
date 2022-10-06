@@ -3,3 +3,4 @@ coverage
 *.lcov
 .idea
 node_modules
+yarn-error.log

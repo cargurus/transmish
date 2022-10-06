@@ -40,7 +40,7 @@ const react_1 = __importStar(require("react"));
  * This component returns a div that when the shouldScroll changes to be true, will autoscroll to the top of the viewport.
  */
 const ScrollToTop = (_a) => {
-    var { children, shouldScroll, scrollOffset = 0, behavior = 'smooth' } = _a, rest = __rest(_a, ["children", "shouldScroll", "scrollOffset", "behavior"]);
+    var { children, shouldScroll, scrollOffset = 0, behavior = "smooth" } = _a, rest = __rest(_a, ["children", "shouldScroll", "scrollOffset", "behavior"]);
     const scrollRef = (0, react_1.useRef)(null);
     (0, react_1.useLayoutEffect)(() => {
         if (shouldScroll) {
