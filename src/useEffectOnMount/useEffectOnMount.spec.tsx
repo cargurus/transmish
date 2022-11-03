@@ -32,7 +32,7 @@ describe("useEffectOnMount", () => {
     );
     expect(result.current.data).toBeNull();
     await waitFor(() => {
-      expect(result.current.data).not.toBeNull()
+      expect(result.current.data).not.toBeNull();
     });
 
     expect(cb).toHaveBeenCalledTimes(1);
