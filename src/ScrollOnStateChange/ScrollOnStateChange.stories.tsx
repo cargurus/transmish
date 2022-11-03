@@ -37,6 +37,7 @@ export const Example: ComponentStory<typeof ScrollOnStateChange> = () => {
       {hundo.map((_, i) => {
         return (
           <Button
+            key={i}
             onClick={() => {
               console.log(i);
               setValue(i);
