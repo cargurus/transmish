@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useBooleanState = (defaultState = false) => {
+const useBooleanState = (defaultState = false) => {
   const [value, setValue] = useState(defaultState);
 
   const toTrue = () => {
@@ -21,3 +21,5 @@ export const useBooleanState = (defaultState = false) => {
     toggle,
   };
 };
+
+export default useBooleanState;

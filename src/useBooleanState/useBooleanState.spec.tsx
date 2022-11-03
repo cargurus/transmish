@@ -1,5 +1,5 @@
 import { act, renderHook } from "@testing-library/react-hooks";
-import { useBooleanState } from ".";
+import useBooleanState from ".";
 
 describe("useBooleanState", () => {
   it("should have a toggleable boolean state", () => {
