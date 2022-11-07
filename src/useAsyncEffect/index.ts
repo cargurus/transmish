@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
-
-type Optional<T> = T | null;
+import { Optional } from "../types";
 
 export type AsyncEffect<T, K> = {
   data: Optional<T>;
