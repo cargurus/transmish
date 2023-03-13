@@ -1,4 +1,4 @@
-declare type Optional<T> = T | null;
+import { Optional } from "../types";
 export declare type AsyncEffect<T, K> = {
     data: Optional<T>;
     loading: boolean;
@@ -28,4 +28,3 @@ export interface AsyncEffectOptions<T> {
  * @param options Config object
  */
 export declare const useAsyncEffect: <T, K = unknown>(func: (arg?: K | undefined) => Promise<T>, options?: AsyncEffectOptions<T>) => AsyncEffect<T, K>;
-export {};

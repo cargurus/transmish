@@ -9,6 +9,7 @@
   "files": [
     "build/**/*"
   ],
+  "main": "./build/index.js",
   "scripts": {
     "build": "rm -rf ./build && tsc",
     "lint": "yarn eslint src/**/*.ts* && prettier src/**/*.ts*",
