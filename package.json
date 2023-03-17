@@ -6,12 +6,20 @@
   "author": "Ian Schwartz <ischwartz@cargurus.com>",
   "license": "MIT",
   "private": false,
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "require":  "./cjs/index.jsx",
+      "default": "./esm/index.jsx"
+    }
+  },
   "files": [
-    "build/**/*"
-  ],
-  "main": "./build/index.js",
+     "./**/*"
+   ],
+  "module": "./esm/index.jsx",
+  "main": "./cjs/index.jsx",
   "scripts": {
-    "build": "rm -rf ./build && tsc",
+    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json && sh rename.sh",
     "lint": "yarn eslint src/**/*.ts* && prettier src/**/*.ts*",
     "lint:fix": "yarn eslint src/**/*.ts* --fix && prettier src/**/*.ts* -w",
     "test": "jest",
