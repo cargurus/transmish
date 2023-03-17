@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.useBooleanState = void 0;
 const react_1 = require("react");
 const useBooleanState = (defaultState = false) => {
     const [value, setValue] = (0, react_1.useState)(defaultState);
@@ -19,4 +20,4 @@ const useBooleanState = (defaultState = false) => {
         toggle,
     };
 };
-exports.default = useBooleanState;
+exports.useBooleanState = useBooleanState;

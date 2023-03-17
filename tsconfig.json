@@ -19,6 +19,6 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
 
-  "include": ["index.ts", "src/**/*"],
-  "exclude": ["node_modules", "src/**/*.spec.ts*", "src/**/*.stories.ts*"]
+  "include": ["index.ts", "src/**/*", "./tests/setupTests.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts*", "src/**/*.stories.ts*"]
 }

@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
-const useInterval = (callback, delay) => {
+export const useInterval = (callback, delay) => {
     const savedCallback = useRef(callback);
     const intervalId = useRef();
     const stopInterval = () => window.clearInterval(intervalId.current);
@@ -19,4 +19,3 @@ const useInterval = (callback, delay) => {
     }, [delay]);
     return stopInterval;
 };
-export default useInterval;

@@ -1,5 +1,5 @@
-import { useCallback, useState } from "react";
-import { Optional } from "../types";
+import { useCallback, useState } from 'react';
+import { Optional } from '../types';
 
 export type AsyncEffect<T, K> = {
   data: Optional<T>;
@@ -33,55 +33,55 @@ export interface AsyncEffectOptions<T> {
  */
 
 export const useAsyncEffect = <T, K = unknown>(
-  func: (arg?: K) => Promise<T>,
-  options: AsyncEffectOptions<T> = {}
+    func: (arg?: K) => Promise<T>,
+    options: AsyncEffectOptions<T> = {}
 ): AsyncEffect<T, K> => {
-  const [data, setData] = useState<Optional<T>>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<Optional<Error>>(null);
-  const [timestamp, setTimestamp] = useState<number>(0);
+    const [data, setData] = useState<Optional<T>>(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<Optional<Error>>(null);
+    const [timestamp, setTimestamp] = useState<number>(0);
 
-  const { onError, onComplete, onReset } = options;
-  const handleError = useCallback(
-    (e: Error) => {
-      setLoading(false);
-      setError(e);
-      onError?.(e);
-    },
-    [onError]
-  );
+    const { onError, onComplete, onReset } = options;
+    const handleError = useCallback(
+        (e: Error) => {
+            setLoading(false);
+            setError(e);
+            onError?.(e);
+        },
+        [onError]
+    );
 
-  const handleData = useCallback(
-    (d) => {
-      setData(d);
-      setLoading(false);
-      onComplete?.(d);
-    },
-    [onComplete]
-  );
+    const handleData = useCallback(
+        (d) => {
+            setData(d);
+            setLoading(false);
+            onComplete?.(d);
+        },
+        [onComplete]
+    );
 
-  const fireCallback = useCallback(
-    async (arg?: K) => {
-      try {
-        setTimestamp(Date.now());
-        setLoading(true);
+    const fireCallback = useCallback(
+        async (arg?: K) => {
+            try {
+                setTimestamp(Date.now());
+                setLoading(true);
+                setError(null);
+                const res = await func(arg);
+                handleData(res);
+            } catch (e) {
+                if (e instanceof Error) {
+                    handleError(e);
+                }
+            }
+        },
+        [func, handleError, handleData]
+    );
+
+    const reset = () => {
+        setData(null);
         setError(null);
-        const res = await func(arg);
-        handleData(res);
-      } catch (e) {
-        if (e instanceof Error) {
-          handleError(e);
-        }
-      }
-    },
-    [func, handleError, handleData]
-  );
+        onReset?.();
+    };
 
-  const reset = () => {
-    setData(null);
-    setError(null);
-    onReset?.();
-  };
-
-  return { data, timestamp, error, loading, fireCallback, reset };
+    return { data, timestamp, error, loading, fireCallback, reset };
 };

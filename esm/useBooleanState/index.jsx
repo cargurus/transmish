@@ -1,5 +1,5 @@
 import { useState } from "react";
-const useBooleanState = (defaultState = false) => {
+export const useBooleanState = (defaultState = false) => {
     const [value, setValue] = useState(defaultState);
     const toTrue = () => {
         setValue(true);
@@ -17,4 +17,3 @@ const useBooleanState = (defaultState = false) => {
         toggle,
     };
 };
-export default useBooleanState;

@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import {
-  AsyncEffect,
-  AsyncEffectOptions,
-  useAsyncEffect,
-} from "../useAsyncEffect";
+    AsyncEffect,
+    AsyncEffectOptions,
+    useAsyncEffect,
+} from '../useAsyncEffect';
 
 /**
  * Handles the most common state requirements for tracking async behavior.
@@ -17,14 +17,14 @@ interface OnMountEffectOptions<T, K> extends AsyncEffectOptions<T> {
 }
 
 export const useEffectOnMount = <T, K = unknown>(
-  func: (arg?: K) => Promise<T>,
-  options: OnMountEffectOptions<T, K> = {}
+    func: (arg?: K) => Promise<T>,
+    options: OnMountEffectOptions<T, K> = {}
 ): AsyncEffect<T, K> => {
-  const effect = useAsyncEffect(func, options);
+    const effect = useAsyncEffect(func, options);
 
-  useEffect(() => {
-    effect.fireCallback(options.initialProps);
-  }, []);
+    useEffect(() => {
+        effect.fireCallback(options.initialProps);
+    }, []);
 
-  return effect;
+    return effect;
 };

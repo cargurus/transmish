@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.useInterval = void 0;
 const react_1 = require("react");
 const useInterval = (callback, delay) => {
     const savedCallback = (0, react_1.useRef)(callback);
@@ -21,4 +22,4 @@ const useInterval = (callback, delay) => {
     }, [delay]);
     return stopInterval;
 };
-exports.default = useInterval;
+exports.useInterval = useInterval;
