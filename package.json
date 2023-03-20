@@ -22,7 +22,6 @@
     "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json && sh rename.sh",
     "lint": "$npm_execpath eslint src/**/*.ts* && prettier src/**/*.ts*",
     "lint:fix": "$npm_execpath eslint src/**/*.ts* --fix && prettier src/**/*.ts* -w",
-	"prepack": "$npm_execpath run build",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
