@@ -1,15 +1,15 @@
-# schwifty
+# transmish
 
 React Utility Library
 
 ## Motivation
 
-`schwifty` is a collection of components, hooks, and
+`transmish` is a collection of components, hooks, and
 functions for supporting front-end development in React.
 These are meant to be simple and reusable abstractions
 over tasks that React developers do on a regular basis.
 
-`schwifty` is not a component library in the sense of
+`transmish` is not a component library in the sense of
 Bootstrap or Material. Its components are almost entirely
 lacking in CSS, but rather focus on common behaviors
 in UIs.
@@ -18,11 +18,11 @@ in UIs.
 
 ## Usage
 
-0. (TODO) run `npm install schwifty` or `yarn add schwifty`.
-1. For now you can install `schwifty` directly from source control with this command:
-	`yarn add schwifty@git@code.cargurus.com:ischwartz/schwifty.git`
+0. (TODO) run `npm install transmish` or `yarn add transmish`.
+1. For now you can install `transmish` directly from source control with this command:
+	`yarn add schwifty@git@code.cargurus.com:ischwartz/transmish.git`
 	If you need specify a specific branch add it to the end 
-	`yarn add schwifty@git@code.cargurus.com:ischwartz/schwifty.git#my-branch`.
+	`yarn add schwifty@git@code.cargurus.com:ischwartz/transmish.git#my-branch`.
 
 ### Development
 
