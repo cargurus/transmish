@@ -22,3 +22,4 @@ __exportStar(require("./useAsyncEffect"), exports);
 __exportStar(require("./useBooleanState"), exports);
 __exportStar(require("./useEffectOnMount"), exports);
 __exportStar(require("./useInterval"), exports);
+__exportStar(require("./useIntersectionObserver"), exports);

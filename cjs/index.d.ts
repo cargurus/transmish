@@ -6,3 +6,4 @@ export * from './useAsyncEffect';
 export * from './useBooleanState';
 export * from './useEffectOnMount';
 export * from './useInterval';
+export * from './useIntersectionObserver';
