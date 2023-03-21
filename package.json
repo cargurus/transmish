@@ -1,8 +1,8 @@
 {
-  "name": "schwifty",
+  "name": "transmish",
   "version": "0.0.1",
   "description": "React utility library",
-  "repository": "git@code.cargurus.com:ischwartz/schwifty.git",
+  "repository": "git@code.cargurus.com:ischwartz/transmish.git",
   "author": "Ian Schwartz <ischwartz@cargurus.com>",
   "license": "MIT",
   "private": false,
