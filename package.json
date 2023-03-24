@@ -19,9 +19,6 @@
       "default": "./esm/index.jsx"
     }
   },
-  "files": [
-    "./**/*"
-  ],
   "module": "./esm/index.jsx",
   "main": "./cjs/index.jsx",
   "scripts": {
