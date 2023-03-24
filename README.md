@@ -12,17 +12,11 @@ over tasks that React developers do on a regular basis.
 `transmish` is not a component library in the sense of
 Bootstrap or Material. Its components are almost entirely
 lacking in CSS, but rather focus on common behaviors
-in UIs.
+in UIs. `transmish` also features common utility hooks 
 
 ## Installation
 
-## Usage
-
-0. (TODO) run `npm install transmish` or `yarn add transmish`.
-1. For now you can install `transmish` directly from source control with this command:
-	`yarn add schwifty@git@code.cargurus.com:ischwartz/transmish.git`
-	If you need specify a specific branch add it to the end 
-	`yarn add schwifty@git@code.cargurus.com:ischwartz/transmish.git#my-branch`.
+Run `npm install transmish` or `yarn add transmish`.
 
 ### Development
 
