@@ -12,19 +12,34 @@ over tasks that React developers do on a regular basis.
 `transmish` is not a component library in the sense of
 Bootstrap or Material. Its components are almost entirely
 lacking in CSS, but rather focus on common behaviors
-in UIs.
+in UIs. `transmish` also provides hooks, types and constants
+for a variety of common UI use cases. 
 
 ## Installation
 
+Run `npm install transmish` or `yarn add transmish`.
+
 ## Usage
 
-0. (TODO) run `npm install transmish` or `yarn add transmish`.
-1. For now you can install `transmish` directly from source control with this command:
-	`yarn add schwifty@git@code.cargurus.com:ischwartz/transmish.git`
-	If you need specify a specific branch add it to the end 
-	`yarn add schwifty@git@code.cargurus.com:ischwartz/transmish.git#my-branch`.
+```typescript
+import { useEffectOnMount, Hideable, useIntersectionObserver } from "transmish";
+```
 
-### Development
+### Components
+
+- Hideable
+- ScrollOnStateChange
+- ScrollToTop
+
+### Hooks
+
+- useAsyncEffect
+- useEffectOnMount
+- useIntersectionObserver
+- useInterval
+- useBooleanState
+
+## Development
 
 1. Install all dependencies with `yarn install`.
 2. Run `yarn build` to check types and compile the
