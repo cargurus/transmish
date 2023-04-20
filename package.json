@@ -27,7 +27,9 @@
     "lint:fix": "prettier src/**/*.ts* -w && eslint src/**/*.ts* --fix",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "changelog": "yarn run --silent changelog-maker --format markdown --all > ./changelog.md",
+    "release": "changelog && publish"
   },
   "dependencies": {},
   "devDependencies": {
@@ -51,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "babel-loader": "^8.2.5",
+    "changelog-maker": "^3.2.3",
     "eslint": "^8.22.0",
     "eslint-plugin-react": "^7.31.8",
     "jest": "^28.1.3",
