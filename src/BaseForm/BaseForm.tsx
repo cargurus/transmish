@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 
 export type FormObject<T extends string> = Record<T, string | Blob>;
+
 /**
  * This wraps around a FormData object to allow you specify which keys will be used.
  * TypedFormData.fromForm<'foo' | 'bar'>(someHTMLElement);
@@ -37,13 +38,27 @@ export class TypedFormData<T extends string> {
 export interface BaseFormProps<T extends string> {
   className?: string;
   title: string;
+  /**
+   * This is the mechanism for bubbling up the values of the form.
+   */
   onSubmit: (data: FormObject<T>) => void;
   children: ReactNode;
+  /**
+   * Whatever component you pass here will be magically "disabled" if the form hasn't been
+   * modified or if you pass a true condition to the "submitDisabled" prop
+   */
   button?: JSX.Element;
   formId?: string;
+  /**
+   * Overrides the internal mechanism that decides whether to allow submission of the form or not.
+   */
   submitDisabled?: boolean;
 }
 
+/**
+ * This component presents a (relatively) typesafe way of working with HTML forms.
+ * No external state management is required.
+ */
 const getFormValueString = (form: HTMLFormElement): string => {
     const elements = [...form.elements] as HTMLInputElement[];
     return elements
@@ -92,7 +107,9 @@ export const BaseForm = <T extends string>({
     };
 
     const disabled: boolean =
-    submitDisabled || computedValue === '' || computedValue === initialValue;
+    submitDisabled !== undefined
+        ? submitDisabled
+        : computedValue === '' || computedValue === initialValue;
 
     return (
         <form

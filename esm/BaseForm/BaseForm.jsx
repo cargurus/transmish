@@ -19,6 +19,10 @@ export class TypedFormData {
         return TypedFormData.fromFormData(new FormData(target));
     }
 }
+/**
+ * This component presents a (relatively) typesafe way of working with HTML forms.
+ * No external state management is required.
+ */
 const getFormValueString = (form) => {
     const elements = [...form.elements];
     return elements
@@ -51,7 +55,9 @@ export const BaseForm = ({ title, className, children, onSubmit, button, formId,
         e.preventDefault();
         return onSubmit(TypedFormData.fromForm(e.target).toJS());
     };
-    const disabled = submitDisabled || computedValue === '' || computedValue === initialValue;
+    const disabled = submitDisabled !== undefined
+        ? submitDisabled
+        : computedValue === '' || computedValue === initialValue;
     return (React.createElement("form", { id: formId, ref: formRef, "aria-label": title, onSubmit: handleSubmit, onChange: handleChange, className: className },
         children,
         button && React.cloneElement(button, { disabled })));

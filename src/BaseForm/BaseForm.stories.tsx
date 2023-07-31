@@ -71,7 +71,7 @@ export const ControlledInput: ComponentStory<typeof BaseForm> = () => {
             }
         >
             <h3>
-        Sometimes you'll want to use controlled inputs for custom validations
+        Sometimes you will want to use controlled inputs for custom validations
             </h3>
       Enter any word more than 5 letters
             <input
@@ -81,12 +81,12 @@ export const ControlledInput: ComponentStory<typeof BaseForm> = () => {
                 required
             />
             {longWord.length > 0 && longWord.length < 5 && (
-                <div style={{ color: 'red' }}>That word isn't long enough</div>
+                <div style={{ color: 'red' }}>That word is not long enough</div>
             )}
             <br />
             <label>
         Are you Eddie Dingle <br />
-        Yes <br/>
+        Yes <br />
                 <input
                     type="radio"
                     name="eddieDingle"
@@ -95,7 +95,7 @@ export const ControlledInput: ComponentStory<typeof BaseForm> = () => {
                     onClick={() => setEddie(true)}
                 />
                 <br />
-        No <br/>
+        No <br />
                 <input
                     type="radio"
                     name="eddieDingle"
