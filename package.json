@@ -22,7 +22,7 @@
   "module": "./esm/index.jsx",
   "main": "./cjs/index.jsx",
   "scripts": {
-    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json && sh rename.sh",
+    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
     "lint": "eslint src/**/*.ts* && prettier src/**/*.ts*",
     "lint:fix": "prettier src/**/*.ts* -w && eslint src/**/*.ts* --fix",
     "test": "jest",
