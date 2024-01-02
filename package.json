@@ -1,6 +1,6 @@
 {
   "name": "transmish",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React utility library",
   "repository": "git@github.com:cargurus/transmish.git",
   "author": "Ian Schwartz <ischwartz@cargurus.com>",
