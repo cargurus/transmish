@@ -7,3 +7,4 @@ export * from './useBooleanState';
 export * from './useEffectOnMount';
 export * from './useInterval';
 export * from './useIntersectionObserver';
+export * from './useReducedMotion';
