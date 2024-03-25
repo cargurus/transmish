@@ -33,11 +33,12 @@ import { useEffectOnMount, Hideable, useIntersectionObserver } from "transmish";
 
 ### Hooks
 
-- useAsyncEffect
-- useEffectOnMount
-- useIntersectionObserver
-- useInterval
-- useBooleanState
+- [useAsyncEffect](/src/useAsyncEffect/README.md)
+- [useBooleanState](/src/useBooleanState/README.md)
+- [useEffectOnMount](/src/useEffectOnMount/README.md)
+- [useIntersectionObserver](/src/useIntersectionObserver/README.md)
+- [useInterval](/src/useInterval/README.md)
+- [useReducedMotion](/src/useReducedMotion/README.md)
 
 ## Development
 
