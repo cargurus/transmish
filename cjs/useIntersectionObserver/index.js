@@ -12,6 +12,7 @@ const react_1 = require("react");
  *      @property rootMargin <undefined|string>: Margin around the root.
  *      @property threshold <number|number[]>: Either a single number or an array of numbers which indicate at what
  *      percentage of the target's visibility the observer's callback should be executed.
+ * @returns {{containerRef: React.MutableRefObject<HTMLDivElement | null>}} An object containing a ref to the container element.
  */
 const useIntersectionObserver = (callback, options) => {
     const containerRef = (0, react_1.useRef)(null);
