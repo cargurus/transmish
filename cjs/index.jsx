@@ -23,3 +23,4 @@ __exportStar(require("./useBooleanState"), exports);
 __exportStar(require("./useEffectOnMount"), exports);
 __exportStar(require("./useInterval"), exports);
 __exportStar(require("./useIntersectionObserver"), exports);
+__exportStar(require("./useReducedMotion"), exports);
